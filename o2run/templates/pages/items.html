@@ -11,7 +11,7 @@
 				<div class="list-group">
 					{% if item_groups %}
 						{% for group in item_groups %}
-            						<a href="#" class="list-group-item">{{ group.name }}</a>
+            						<a href="#" group-name="{{ group.name}}" class="list-group-item">{{ group.name }}</a>
 						{% endfor %}
 					{% endif %}
           			</div>
@@ -19,6 +19,7 @@
 	        <!-- /.col-lg-3 -->
 		<div class="col-lg-9">
 		<div class="row">
+			<div class="o2run-items">
 			{% if items %}
 				{% for item in items %}
 					<div class="col-lg-3 col-md-4 mb-3 product-col">
@@ -36,7 +37,7 @@
 							</div>
                	 					<div class="card-body">
                   						<h4 class="card-title">
-                    							<a href="#">{{ item.item_name }}</a>
+                    							<a href="/item?name={{ item.name }}">{{ item.item_name }}</a>
                   						</h4>
                   						<h5>{{ item.price_list_rate or 0.0 }}</h5>
                   						<p class="card-text">{{ item.item_code }}</p>
@@ -48,6 +49,7 @@
               				</div>
 				{% endfor %}
 	    		{% endif %}
+			</div>
           	</div>
 	</div>
 	</div>
