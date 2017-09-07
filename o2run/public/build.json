@@ -1,0 +1,19 @@
+{
+	"js/o2run-min.js":[
+		"public/js/o2run.js",
+		"public/js/libs/popper/popper.js",
+		"public/js/libs/popper/popper.min.js"
+	],
+	"css/o2run-bootstrap-min.css":[
+		"public/css/libs/bootstrap/bootstrap.css",
+		"public/css/libs/bootstrap/bootstrap-grid.css",
+		"public/css/libs/bootstrap/bootstrap-grid.min.css",
+		"public/css/libs/bootstrap/bootstrap.min.css",
+		"public/css/libs/bootstrap/bootstrap-reboot.css",
+		"public/css/libs/bootstrap/bootstrap-reboot.min.css"
+	],
+	"css/o2run-min.css":[
+		"public/css/shop-homepage.css",
+		"public/css/o2run.css"
+	]
+}

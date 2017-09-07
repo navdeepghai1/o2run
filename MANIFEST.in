@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include o2run *.css
+recursive-include o2run *.csv
+recursive-include o2run *.html
+recursive-include o2run *.ico
+recursive-include o2run *.js
+recursive-include o2run *.json
+recursive-include o2run *.md
+recursive-include o2run *.png
+recursive-include o2run *.py
+recursive-include o2run *.svg
+recursive-include o2run *.txt
+recursive-exclude o2run *.pyc

@@ -1,0 +1,54 @@
+{% extends "templates/web.html" %}
+{% block title %}
+	{{ _("Products") }}
+{% endblock %}
+{% block content %}
+    <!-- Page Content -->
+	<div class="products-container">
+		<div class="row">
+			<div class="col-lg-3">
+				<h1 class="my-4">{{ _("Product Categories") }}</h1>
+				<div class="list-group">
+					{% if item_groups %}
+						{% for group in item_groups %}
+            						<a href="#" class="list-group-item">{{ group.name }}</a>
+						{% endfor %}
+					{% endif %}
+          			</div>
+        		</div>
+	        <!-- /.col-lg-3 -->
+		<div class="col-lg-9">
+		<div class="row">
+			{% if items %}
+				{% for item in items %}
+					<div class="col-lg-3 col-md-4 mb-3 product-col">
+						<div class="card h-100">
+							<div class="product-image-field">
+                						<a href="#">
+									<img 
+										{% if item.image %}
+											src="{{ item.image }}"
+										{% else %}
+											src="http://placehold.it/700x400"
+										{% endif %}
+									>
+								</a>
+							</div>
+               	 					<div class="card-body">
+                  						<h4 class="card-title">
+                    							<a href="#">{{ item.item_name }}</a>
+                  						</h4>
+                  						<h5>{{ item.price_list_rate or 0.0 }}</h5>
+                  						<p class="card-text">{{ item.item_code }}</p>
+                					</div>
+                					<div class="card-footer">
+                  						<small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+							</div>
+                				</div>
+              				</div>
+				{% endfor %}
+	    		{% endif %}
+          	</div>
+	</div>
+	</div>
+{% endblock %}
