@@ -1,0 +1,25 @@
+{% extends "templates/web.html" %}
+{% block title %}
+	{{ title }}
+{% endblock %}
+
+{% block content %}
+
+   {% if item %}
+	<div class="o2run-item-content" style="margin-top:20px">
+		<div class="row">
+			<div class="col-lg-6 o2run-item-image">
+				<img src="{{ item.image }}"  style="height:300px;"></img>
+			</div>
+			<div class="col-lg-4">
+				<h1> {{ _("Item Detail") }} </h1>
+				<div class="o2run-item-info">
+					<h5> {{ item.name }}</h5>
+					<h4> {{ item.price_list_rate }} </h4>
+				</div>
+			</div>
+		</div>
+	</div>
+  {% endif %}
+
+{% endblock %}
